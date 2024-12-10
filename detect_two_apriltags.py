@@ -56,16 +56,12 @@ print(" ")
 
 
 # Position estimator
-tagSize = 3.7
-fx = 3092.0
-fy = 3079.0
-panoramic = True
-if panoramic:
-    cx = 2064.0
-    cy = 1530.0
-else:
-    cx = 1530.0
-    cy = 2064.0
+tagSize = 37
+fx = 705.5
+fy = 693.0
+cx = 665.0
+cy = 350.0
+
 
 estimator = rpa.AprilTagPoseEstimator( rpa.AprilTagPoseEstimator.Config(tagSize, fx,fy,cx,cy) )
 estimates = []
@@ -97,10 +93,4 @@ while (index < 2) and (index < len(estimates)):
     index += 1
 output.write(text)
 output.close()
-
-
-
-
-
-
 
